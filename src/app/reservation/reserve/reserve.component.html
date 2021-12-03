@@ -1,0 +1,32 @@
+<div class="container d-flex justify-content-around offers" style="border-radius: 10px;">
+
+    <form [formGroup]="reserve">
+        <h1 style="padding-bottom: 50px;font-family:Comic Sans MS;margin-left:25px" class="label">Reservation Form</h1>
+
+        <input type="text" name="f_name" placeholder=" First name" class="form-control form" formControlName="f_name" /><br>
+        <input type="text" name="l_name" placeholder=" Last name" class="form-control form" formControlName="l_name" /><br>
+        <label class="formlabel label">Gender:</label>
+        <br>
+        <input type="radio" class="form-check-input  " name="gender" value="male" formControlName="gender"><i class=" label"> Male </i>
+        <input type="radio" class="form-check-input " name="gender" value="female" formControlName="gender"><i class=" label"> Female </i>
+        <input type="radio" class="form-check-input " name="gender" value="other" formControlName="gender"><i class=" label"> Other </i>
+        <br><br>
+        <input type="number" name="age" class="form-control form" placeholder=" Age" formControlName="age" /><br>
+        <input type="text" name="pass_num" class="form-control form" placeholder=" Passport Number" formControlName="pass_num" /><br>
+        <input type="email" name="email" class="form-control disabled form fas fa-envelope" placeholder=" Email" formControlName="email" />
+        <br>
+        <select class="form-select form" formControlName="Nat">
+            <option *ngFor="let i of countryList" [value]="i">{{i}}</option>
+        </select>
+        <br>
+        <br>
+        <button class="btn btn-success button" (click)="submit()"><i class="fas fa-sign-in-alt"> Reserve</i></button>
+        <button class=" btn btn-dark " style="margin-left:25px; border-radius: 50px;" (click)="back()"><i class="fas fa-arrow-left"> Back</i></button>
+
+    </form>
+    <div class="line label" style="float:right;">
+        <h1 class="first">We thank you for choosing Us</h1>
+        <h1 class="between">And</h1>
+        <h1 class="second">We Wish You a Great time!</h1>
+    </div>
+</div>

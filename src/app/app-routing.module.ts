@@ -10,6 +10,8 @@ import { CurrencyComponent } from "./essential/currency/currency.component";
 import { TravelPapersComponent } from "./essential/travel-papers/travel-papers.component";
 import { EmergencyNumbersComponent } from "./essential/emergency-numbers/emergency-numbers.component";
 import { LanguageComponent } from "./essential/language/language.component";
+import { ReserveComponent } from './reservation/reserve/reserve.component';
+import { SeeMoreComponent } from './see-more/see-more.component';
 
 const routes: Routes = [
   {path: 'Home', component: HomeComponent},
@@ -26,6 +28,8 @@ const routes: Routes = [
       {path: '', redirectTo: 'health', pathMatch: 'full'}
     ]
   },
+  {path: 'Reserve', component:ReserveComponent},
+  {path: 'Destinations/:id' , component:SeeMoreComponent},
   {path: '', redirectTo: 'Home', pathMatch: 'full'}
 ];
 
